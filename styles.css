@@ -53,8 +53,8 @@ header p {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: none;
-    color: white;
+    background: url(./fotos/IMG_6470.jpg) no-repeat center center/cover;
+    color: gray;
     text-align: center;
     padding: 2rem;
     width: 100%;
