@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria de Fotos - Casamento</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Tela de Login -->
+    <div class="login-screen" id="loginScreen">
+      <h2>
+        <img src="./fotos/logo3.png" alt="logo" />
+      </h2>
+      <p>Faça login para visualizar as fotos:</p>
+      <input type="password" id="passwordInput" placeholder="Digite a senha" />
+      <button id="loginButton">Entrar</button>
+      <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <!-- Conteúdo da Galeria -->
+    <div class="content" id="content" style="display: none">
+      <header>
+        <h1>
+          <img src="./fotos/logo3.png" alt="logo" />
+        </h1>
+        <p>Momentos inesquecíveis que queremos compartilhar com vocês ❤️</p>
+      </header>
+
+      <div class="gallery">
+        <img src="./fotos/foto1.jpg" alt="Foto 1" />
+        <img src="./fotos/foto2.jpg" alt="Foto 2" />
+        <img src="./fotos/foto3.jpg" alt="Foto 3" />
+        <img src="./fotos/foto4.jpg" alt="Foto 4" />
+        <img src="./fotos/foto5.jpg" alt="Foto 5" />
+        <img src="./fotos/foto6.jpg" alt="Foto 6" />
+        <img src="./fotos/foto7.jpg" alt="Foto 7" />
+        <img src="./fotos/foto8.jpg" alt="Foto 8" />
+        <img src="./fotos/foto9.jpg" alt="Foto 9" />
+        <img src="./fotos/foto10.jpg" alt="Foto 10" />
+        <img src="./fotos/foto11.jpg" alt="Foto 11" />
+        <img src="./fotos/foto12.jpg" alt="Foto 12" />
+        <img src="./fotos/foto13.jpg" alt="Foto 13" />
+        <img src="./fotos/foto14.jpg" alt="Foto 14" />
+        <img src="./fotos/foto15.jpg" alt="Foto 15" />
+        <img src="./fotos/foto16.jpg" alt="Foto 16" />
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="photoModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImg" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
