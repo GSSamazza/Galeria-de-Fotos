@@ -1,215 +1,233 @@
+/* Reset global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  margin: auto;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Roboto", Arial, sans-serif;
+  height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*background: url(./fotos/IMG_6470.jpg) no-repeat center center/cover;*/
-    opacity: 1;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  /* background: url(./fotos/IMG_6470.jpg) no-repeat center center/cover; */
 }
 
+/* Header */
 header {
-    border-radius: 12px;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    width: 100%;
-    box-sizing: border-box;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
 }
 
 header h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
 }
 
+/* Login screen */
 .login-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url(./fotos/IMG_6470.jpg) no-repeat center center/cover;
-    color: gray;
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./fotos/IMG_6470.jpg) no-repeat center center/cover;
+  color: gray;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
 }
 
 .login-screen h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .login-screen p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 .login-screen input {
-    padding: 0.8rem;
-    width: 80%;
-    max-width: 300px;
-    margin: 0.5rem 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-align: center;
+  padding: 0.8rem;
+  width: 80%;
+  max-width: 300px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .login-screen button {
-    background-color: #fff;
-    color: black;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
 }
 
 .login-screen button:hover {
-    background-color: gray;
+  background-color: #333;
+  color: white;
 }
 
 .login-screen .error-message {
-    color: #ff7675;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+  color: #ff7675;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
+/* Gallery */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  width: 100%;
+  justify-items: center; /* Centraliza imagens */
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 1000;
 }
 
 .modal img {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.modal img:hover {
+  transform: scale(1.05); /* Efeito ao passar o mouse */
 }
 
 .modal .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
+.modal .close:hover {
+  color: red;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    header p {
-        font-size: 1rem;
-    }
+  header p {
+    font-size: 1rem;
+  }
 
-    .login-screen h2 {
-        font-size: 1.5rem;
-    }
+  .login-screen h2 {
+    font-size: 1.5rem;
+  }
 
-    .login-screen p {
-        font-size: 1rem;
-    }
+  .login-screen p {
+    font-size: 1rem;
+  }
 
-    .login-screen input {
-        width: 90%;
-        max-width: 250px;
-    }
+  .login-screen input {
+    width: 90%;
+    max-width: 250px;
+  }
 
-    .gallery {
-        grid-template-columns: 1fr;
-    }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 1rem 0.5rem;
-    }
+  header {
+    padding: 1rem 0.5rem;
+  }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
+  header h1 {
+    font-size: 1.8rem;
+  }
 
-    header p {
-        font-size: 0.9rem;
-    }
+  header p {
+    font-size: 0.9rem;
+  }
 
-    .login-screen h2 {
-        font-size: 1.2rem;
-    }
+  .login-screen h2 {
+    font-size: 1.2rem;
+  }
 
-    .login-screen p {
-        font-size: 0.9rem;
-    }
+  .login-screen p {
+    font-size: 0.9rem;
+  }
 
-    .login-screen input {
-        width: 100%;
-        max-width: 200px;
-        padding: 0.6rem;
-    }
+  .login-screen input {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.6rem;
+  }
 
-    .login-screen button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
+  .login-screen button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 
-    .gallery {
-        padding: 1rem;
-    }
+  .gallery {
+    padding: 1rem;
+  }
 }
