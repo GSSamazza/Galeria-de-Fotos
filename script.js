@@ -18,17 +18,23 @@ function validateLogin() {
   } else {
     errorMessage.textContent = "Senha incorreta. Tente novamente."
     passwordInput.value = ""
+    passwordInput.focus() // Foco no campo de senha
   }
 }
 
-//Verifica o login ao clicar no botão
+// Verifica o login ao clicar no botão
 loginButton.addEventListener("click", validateLogin)
 
-//Verifca o login ao pressionar ENTER
+// Verifica o login ao pressionar ENTER
 passwordInput.addEventListener("keydown", (Event) => {
   if (Event.key == "Enter") {
     validateLogin()
   }
+})
+
+// Limpa a mensagem de erro enquanto o usuário digita
+passwordInput.addEventListener("input", () => {
+  errorMessage.textContent = ""
 })
 
 // Modal da galeria
@@ -39,17 +45,20 @@ const closeModal = document.getElementById("closeModal")
 
 galleryImages.forEach((img) => {
   img.addEventListener("click", () => {
+    modal.classList.add("active") // Adiciona animação
     modal.style.display = "flex"
     modalImg.src = img.src
   })
 })
 
 closeModal.addEventListener("click", () => {
+  modal.classList.remove("active") // Remove animação
   modal.style.display = "none"
 })
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
+    modal.classList.remove("active") // Remove animação
     modal.style.display = "none"
   }
 })
